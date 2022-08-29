@@ -1,0 +1,112 @@
+@font-face {
+    font-family: myHeaderFont;
+    src: url('Hand_Of_Sean_Demo.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: myButtonFont;
+    src: url('MELADU\ ROSE.otf') format('opentype')
+}
+
+.mainBoard {
+    background-image: url("tile.jpg");
+    display: flex;
+    /* flex: auto; */
+    margin: 0 auto;
+    justify-content: center;
+    gap: 3px;
+}
+
+input [type=date] input[type=time] textarea {
+    border: none;
+}
+
+.mainNotePad {
+    background: none;
+    font-size: large;
+    font-family: myHeaderFont;
+    /* font-weight:50; */
+}
+
+.pageHeader {
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+    font-family: myHeaderFont;
+    font-size: xx-large;
+}
+
+.notePad {
+    background-image: url("formbg.jpg");
+    background-repeat: repeat-y;
+    text-align: center;
+    background-position: center;
+}
+
+button {
+    border-color: blue;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    width: 65px;
+    height: 35px;
+    border-collapse: collapse;
+    font-size: large;
+    font-family: myButtonFont;
+    font-weight: bold;
+
+}
+
+.notePage {
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.newNoteWrapper {
+    background: url("notebg.png");
+    margin-top: 10px;
+    padding: 2%;
+   
+    width: 174px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 241px;
+    position: relative;
+    -webkit-animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+span.close {
+    position:absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+
+}
+
+span.date {
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+    /* z-index: -1; */
+}
+span.time {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+span.note {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    height: 165px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-wrap: normal;
+}
